@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root,
+        body {
+            height: 100%;
+        }
+
+        body {
+            
+            -ms-perspective: 2000px;
+            perspective: 2000px;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            background-color: rgba(0, 0, 0, .1);
+        }
+
+        @keyframes run {
+            0% {
+                -ms-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                -ms-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+        }
+
+        .main {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            left: calc(50% - 100px);
+            top: calc(50% - 150px);
+            -ms-transform-style: preserve-3d;
+            -ms-animation: run 30s linear infinite;
+            transform-style: preserve-3d;
+            animation: run 30s linear infinite;
+
+        }
+
+        .div1 {
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            background: rgba(0, 0, 0, 0.2);
+            -ms-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+
+        .div2 {
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            background: rgba(0, 0, 0, .2);
+            -ms-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+        }
+
+        img {
+            position: absolute;
+        }
+
+        .main img:nth-of-type(1) {
+            -ms-transform: rotateY(45deg) translateZ(400px);
+            transform: rotateY(45deg) translateZ(400px);
+        }
+
+        .main img:nth-of-type(2) {
+            -ms-transform: rotateY(90deg) translateZ(400px);
+            transform: rotateY(90deg) translateZ(400px);
+        }
+
+        .main img:nth-of-type(3) {
+            -ms-transform: rotateY(135deg) translateZ(400px);
+            transform: rotateY(135deg) translateZ(400px);
+        }
+
+        .main img:nth-of-type(4) {
+            -ms-transform: rotateY(180deg) translateZ(400px);
+            transform: rotateY(180deg) translateZ(400px);
+        }
+
+        .main img:nth-of-type(5) {
+            -ms-transform: rotateY(225deg) translateZ(400px);
+            transform: rotateY(225deg) translateZ(400px);
+        }
+
+        .main img:nth-of-type(6) {
+            -ms-transform: rotateY(270deg) translateZ(400px);
+            transform: rotateY(270deg) translateZ(400px);
+        }
+
+        .main img:nth-of-type(7) {
+            -ms-transform: rotateY(315deg) translateZ(400px);
+            transform: rotateY(315deg) translateZ(400px);
+        }
+
+        .main img:nth-of-type(8) {
+            -ms-transform: rotateY(360deg) translateZ(400px);
+            transform: rotateY(360deg) translateZ(400px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <img src="./img/IMG_0068.JPG" style="width: 200px;height: 300px;">
+        <img src="./img/IMG_1685.JPG" style="width: 200px;height: 300px;">
+        <img src="./img/IMG_1878.JPG" style="width: 200px;height: 300px;">
+        <img src="./img/IMG_2622.JPG" style="width: 200px;height: 300px;">
+        <img src="./img/IMG_3021.JPG" style="width: 200px;height: 300px;">
+        <img src="./img/IMG_3043.JPG" style="width: 200px;height: 300px;">
+        <img src="./img/IMG_3489.JPG" style="width: 200px;height: 300px;">
+        <img src="./img/IMG_3702.JPG" style="width: 200px;height: 300px;">
+    </div>
+    <script>
+        document.body.onmousemove = function (e) {
+            /*  */
+            this.style.perspectiveOrigin = e.pageX + "px " + e.pageY + "px";
+        }
+    </script>
+</body>
+
+</html>
